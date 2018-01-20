@@ -21,6 +21,7 @@
   </head>
   <body>
     <h3>City Guesser</h3>
+    <div id="strikes"> </div>
     <div id="score"> </div>
     <div id="message"> </div>
 
@@ -61,6 +62,8 @@
       }
 
       document.getElementById("score").innerHTML = "Points: " + points;
+      document.getElementById("strikes").innerHTML = "Stikes: " + strikes;
+
       var object = document.getElementById("places");
 
       function makeGuess() {
@@ -75,6 +78,7 @@
           document.getElementById("message").innerHTML = "Nope. The answer was " + randomCity.name;
           document.getElementById("score").innerHTML = "Points: " + points;
           strikes ++;
+          document.getElementById("strikes").innerHTML = "Stikes: " + strikes;
           if (strikes == 3){
             gameOver();
           }
@@ -111,21 +115,21 @@
       function giveHint(){
           if (hints == 0){
           points = points - 5;
-          alert("This place is in the " + randomCity.hemisphere + " hemisphere.");
+          document.getElementById("message").innerHTML = "This place is in the " + randomCity.hemisphere + " hemisphere.";
           }
 
           else if (hints == 1) {
           points = points - 10
-          alert("This place is in the continent of " + randomCity.continent + ".");
+          document.getElementById("message").innerHTML = "This place is in the continent of " + randomCity.continent + ".";
           }
 
           else if (hints == 2) {
           points = points - 15
-          alert("This place is in " + randomCity.country + ".");
+          document.getElementById("message").innerHTML = "This place is in " + randomCity.country + ".";
           }
 
           else if (hints > 2){
-          alert("Sorry. No more hints.");
+          document.getElementById("message").innerHTML = "Sorry. No more hints.";
           }
           document.getElementById("score").innerHTML = "Points: " + points;
           hints ++;
