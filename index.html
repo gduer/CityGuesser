@@ -29,7 +29,7 @@
      <a id="guessbutton" href="#" onclick="makeGuess();">Guess</a>
     </form>
 
-
+    <input id="hint" type="button" value="hint" align="right" onclick="giveHint();">
 
     <object id="places" data="places.json"></object>
     <div id="map"></div>
@@ -41,6 +41,7 @@
       var points = 0;
       var usedNumbers = [];
       var num;
+      var hints=0;
 
       function getRandomInt(max) {
         num = Math.floor(Math.random() * Math.floor(max));
@@ -101,6 +102,30 @@
               return event.keyCode != 13;
             }
         }
+
+      function giveHint(){
+          if (hints == 0){
+          points = points - 5;
+          alert("This place is in the " + randomCity.hemisphere + " hemisphere.");
+          }
+
+          else if (hints == 1) {
+          points = points - 10
+          alert("This place is in the continent of " + randomCity.continent + ".");
+          }
+
+          else if (hints == 2) {
+          points = points - 15
+          alert("This place is in " + randomCity.country + ".");
+          }
+
+          else if (hints > 2){
+          alert("Sorry. No more hints.");
+          }
+          document.getElementById("score").innerHTML = "Points: " + points;
+          hints ++;
+        }
+
 
     </script>
 
