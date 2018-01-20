@@ -39,8 +39,24 @@
       var randomCity;
       var minZoomLevel = 15;
       var points = 0;
+      var usedNumbers = [];
+      var num;
 
-      function getRandomInt(max) {return Math.floor(Math.random() * Math.floor(max));}
+      function getRandomInt(max) {
+        num = Math.floor(Math.random() * Math.floor(max));
+        if (usedNumbers.includes(num)){
+          return getRandomInt(max);
+        }
+        else{
+          if (usedNumbers.length == latlongs.length){
+            usedNumbers = []
+          }
+          else{
+            usedNumbers.push(num)
+            return num
+          }
+        }
+      }
 
       document.getElementById("score").innerHTML = "Points: " + points;
       var object = document.getElementById("places");
