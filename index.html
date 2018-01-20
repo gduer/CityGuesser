@@ -24,9 +24,9 @@
     <div id="score"> </div>
     <div id="message"> </div>
 
-    <form action="">
-     <input id="guess" type="text" value = " " placeholder="Guess a City" name="Guess a City">
-     <a href="#" onclick="makeGuess();">Guess</a>
+    <form action="" id=guessform>
+     <input id="guess" type="text" placeholder="Guess a City" name="Guess a City">
+     <a id="guessbutton" href="#" onclick="makeGuess();">Guess</a>
     </form>
 
 
@@ -73,10 +73,9 @@
           document.getElementById("message").innerHTML = "Nope. The answer was " + randomCity.name;
           document.getElementById("score").innerHTML = "Points: " + points;
         }
+        document.getElementById("guess").value = "";
         object.onload();
       }
-
-      //document.getElementById("score").innerHTML = "Points: " + points;
 
       object.onload = function() {
         latlongs = eval(object.contentDocument.body.childNodes[0].innerHTML);
@@ -96,11 +95,12 @@
           });;
         }
 
-        $(document).on("keypress", ":input:not(textarea)", function(event) {
-          return event.keyCode != 13;
-          makeGuess();
-          });
-
+        document.getElementById('guess').onkeydown = function(event) {
+            if (event.keyCode == 13) {
+              makeGuess();
+              return event.keyCode != 13;
+            }
+        }
 
     </script>
 
