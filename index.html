@@ -42,6 +42,7 @@
       var usedNumbers = [];
       var num;
       var hints=0;
+      var strikes = 0;
 
       function getRandomInt(max) {
         num = Math.floor(Math.random() * Math.floor(max));
@@ -73,6 +74,10 @@
         else {
           document.getElementById("message").innerHTML = "Nope. The answer was " + randomCity.name;
           document.getElementById("score").innerHTML = "Points: " + points;
+          strikes ++;
+          if (strikes == 3){
+            gameOver();
+          }
         }
         document.getElementById("guess").value = "";
         object.onload();
@@ -126,6 +131,10 @@
           hints ++;
         }
 
+      function gameOver(){
+        alert("GAME OVER! Your final score is " + points)
+        location.reload();
+      }
 
     </script>
 
