@@ -25,7 +25,7 @@
     <div id="message"> </div>
 
     <form action="">
-     <input id="guess" type="text" placeholder="Guess a City" name="Guess a City">
+     <input id="guess" type="text" value = " " placeholder="Guess a City" name="Guess a City">
      <a href="#" onclick="makeGuess();">Guess</a>
     </form>
 
@@ -47,7 +47,7 @@
 
       function makeGuess() {
         var guess = document.getElementById("guess").value;
-        if (guess.toLowerCase() === randomCity.name.toLowerCase()){
+        if (guess.toLowerCase().trim() === randomCity.name.toLowerCase().trim()){
           points = points + 10;
           document.getElementById("message").innerHTML = "That's right!!!!";
           document.getElementById("score").innerHTML = "Points: " + points;

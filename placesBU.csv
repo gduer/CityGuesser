@@ -1,0 +1,77 @@
+name,lat,lng,hemisphere,continent,country
+Melbourne,-37.82003131,144.97501620,Eastern,Australia,Australia
+Los Angeles,33.99430300,-118.38630700,Western,North America,America
+Buenos Aires,-34.60250161,-58.39753137,Western,South America,Argentina
+Sydney,-33.92001097,151.18517980,Eastern,Australia,Australia
+San Francisco,37.78697800,-122.41422400,Western,North America,America
+Johannesburg,-26.17004474,28.03000972,Eastern,Africa,South Africa
+Sao Paulo,-23.55867959,-46.62501998,Western,South America,Brazil
+Rio de Janeiro,-22.92502317,-43.22502079,Western,South America,Brazil
+Lima,-12.04801268,-77.05006209,Western,South America, Peru
+Jakarta,-6.17441771,106.82943760,Eastern,Asia,Indonesia
+Nairobi,-1.28334674,36.81665686,Eastern,Africa,Kenya
+Singapore,1.29303347,103.85582070,Eastern,Asia,Singapore
+Kuala Lumpur,3.16666587,101.69998330,Eastern,Asia,Malaysia
+Phuket,7.88398500,98.38327900,Eastern,Asia,Thailand
+Ho Chi Minh City,10.78002545,106.69502720,Eastern,Asia,Vietnam
+Bangkok,13.74999921,100.51664470,Eastern,Asia,Thailand
+Manila,14.60415895,120.98221720,Eastern,Asia,Philippines
+Mumbai,19.01699038,72.85698930,Eastern,Asia,India
+Mexico City,19.44244244,-99.13098820,Western,South America,Mexico
+Hanoi,21.03332725,105.85001420,Eastern,Asia,Vietnam
+Cancun,21.16995974,-86.83000777,Western,South America,Mexico
+Honolulu,21.30687644,-157.85799790,Western,North America,America
+Macau,22.20299746,113.54504840,Eastern,Asia,China
+Hong Kong,22.30498090,114.18500930,Eastern,Asia,China
+Kolkata,22.49496930,88.32467566,Eastern,Asia,India
+Shenzhen,22.55237051,114.12212310,Eastern,Asia,China
+Guangzhou,23.14498130,113.32501010,Eastern,Asia,China
+Abu Dhabi,24.46668357,54.36659338,Eastern,Asia,United Arab Emirates
+Riyadh,24.64083315,46.77274166,Eastern,Asia,Saudi Arabia
+Dubai,25.22999615,55.27997432,Eastern,Asia,United Arab Emirates
+Guilin,25.27999310,110.28002800,Eastern,Asia,China
+Miami,25.78761070,-80.22410608,Western,North America,America
+Orlando,28.50997683,-81.38003036,Western,North America,America
+New Delhi,28.66999290,77.23000403,Eastern,Asia,India
+Cairo,30.04996035,31.24996822,Eastern,Africa,Egypt
+Hangzhou,30.24997398,120.17001870,Eastern,Asia,China
+Shanghai,31.21645245,121.43650470,Eastern,Asia,China
+Suzhou,31.30047833,120.62001700,Eastern,Asia,China
+Amman,31.95002525,35.93329993,Eastern,Asia,Jordan
+Nanjing,32.05001914,118.77997430,Eastern,Asia,China
+Las Vegas,35.59701194,-105.22250270,Western,North America,America
+Tokyo,35.68501691,139.75140740,Eastern,Asia,Japan
+Seoul,37.56634910,126.99973100,Eastern,Asia,South Korea
+Lisbon,38.72272288,-9.14486631,Western,Europe,Portugal
+Beijing,39.92889223,116.38828570,Eastern,Asia,China
+Baku,40.39527203,49.86221716,Eastern,Asia,Azerbaijan
+Madrid,40.41778400,-3.70378600,Western,Europe,Spain
+Istanbul,41.00804200,28.96954500,Eastern,Europe,Turkey
+Barcelona,41.38329958,2.18337032,Eastern,Europe,Spain
+Rome,41.89595563,12.48325842,Eastern,Europe,Italy
+Sofia,42.68334943,23.31665401,Eastern,Europe,Bulgaria
+London,42.96999860,-81.24998661,Western,Europe,UK
+Toronto,43.69997988,-79.42002079,Western,North America,Canada
+Nice,43.71501772,7.26502397,Eastern,Europe,France
+Florence,43.78000083,11.25000036,Eastern,Europe,Italy
+Bucharest,44.43337180,26.09994665,Eastern,Europe,Romania
+Venice,45.43865928,12.33499874,Eastern,Europe,Italy
+Milan,45.46997520,9.20500891,Eastern,Europe,Italy
+Budapest,47.49190600,19.05522700,Eastern,Europe,Hungary
+Munich,48.13771900,11.57730400,Eastern,Europe,Germany
+Vienna,48.20793600,16.37400600,Eastern,Europe,Austria
+Paris,48.86669293,2.33333533,Eastern,Europe,France
+Vancouver,49.28296100,-123.12113300,Western,North America,Canada
+Prague,50.08761400,14.42058600,Eastern,Europe,Czech Republic
+Frankfurt,50.11094000,8.68031700,Eastern,Europe,Germany
+Kiev,50.43336733,30.51662797,Eastern,Europe,Ukraine
+Brussels,50.85024200,4.35050400,Eastern,Europe,Belgium
+Warsaw,52.23057700,21.01244600,Eastern,Europe,Poland
+Amsterdam,52.37366500,4.89521100,Eastern,Europe,Netherlands
+Berlin,52.52181866,13.40154862,Eastern,Europe,Germany
+Dublin,"53.350406,",-6.26331300,Western,Europe,Republic of Ireland
+Moscow,55.75216412,37.61552283,Eastern,Europe,Russia
+New York City,40.74998000,-73.98000000,Western,North America,America
+St Petersburg,59.93901000,30.31602000,Eastern,Europe,Russia
+Marrakech,31.63068200,-7.98505600,Western,Africa,Morocco
+Washington DC,38.89955000,-77.00940000,Western,North America,America
