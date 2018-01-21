@@ -7,10 +7,10 @@
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
-      #map {height: 100%; width:100%; margin: 0;}
-      #places {height:0;width:0;opacity:0;}
+      #map {height: 100%; width:100%; margin: 0; padding-top: 0;}
+      #places {height:0;width:0;opacity:0; padding:0; margin: 0;  visibility: hidden; line-height: 0}
       /* Optional: Makes the sample page fill the window. */
-      html, body { height: 100%; margin: 0 !important; padding: 0 !important;}
+      html, body { height: 100%; margin: 0; padding: 0}
 
       .floating-menu {
         font-family: sans-serif;
@@ -21,14 +21,29 @@
         z-index: 100;
         opacity:0.9;
         position: absolute;
-        border-radius: 10px;
-        margin: 20px;
+        border-radius: 5px;
+        margin-top: 65px;
+        margin-left: 10px;
+      }
+
+      .navbar-default {
+        padding-bottom: 0;
+        margin-bottom: 0;
       }
 
 
     </style>
 
-
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">CityGuesser</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a data-toggle="modal" href="#Instructions">Rules/Instructions</a></li>
+    </ul>
+  </div>
+</nav>
 
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -45,7 +60,6 @@
   </head>
   <body>
     <div class="floating-menu">
-      <h3>City Guesser</h3>
       <div id="strikes"> </div>
       <div id="score"> </div>
       <div id="message"> </div>
@@ -55,7 +69,6 @@
       </form>
 
       <input id="hint" type="button" value="hint" align="right" onclick="giveHint();">
-      <a data-toggle="modal" href="#Instructions">Rules/Instructions</a>
     </div>
 
     <object id="places" data="places.json"></object>
