@@ -9,4 +9,6 @@ Our game, CityGuesser, allows the user to zoom in as much as much as the google 
 
 While the game seems hard at first, students (and adults) will quickly learn how to distinguish patterns of urban development around and, hopefully, find that our application is a fun and engaging way to experience our world.
 
+
+
 Note: Works best on Google Chrome and Mozilla Firefox.
