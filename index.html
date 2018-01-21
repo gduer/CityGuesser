@@ -7,10 +7,10 @@
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
-      #map {height: 100%; width:100%; margin: auto;}
+      #map {height: 100%; width:100%; margin: 0;}
       #places {height:0;width:0;opacity:0;}
       /* Optional: Makes the sample page fill the window. */
-      html, body {height: 100%; margin: 0; padding: 0;}
+      html, body { height: 100%; margin: 0 !important; padding: 0 !important;}
 
       .floating-menu {
         font-family: sans-serif;
@@ -20,7 +20,9 @@
         height: 300px;
         z-index: 100;
         opacity:0.9;
-        position: fixed;
+        position: absolute;
+        border-radius: 10px;
+        margin: 20px;
       }
 
 
