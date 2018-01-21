@@ -64,11 +64,10 @@
       <div id="score"> </div>
       <div id="message"> </div>
       <form action="" id=guessform>
-       <input id="guess" type="text" placeholder="Guess a City" name="Guess a City">
+       <input id="guess" type="text" class="form-control form-control-lg" placeholder="Guess a City" name="Guess a City">
        <a id="guessbutton" href="#" class="btn btn-primary" onclick="makeGuess();">Guess</a>
+       <input id="hint" type="button" value="hint" class="btn btn-secondary" onclick="giveHint();">
       </form>
-
-      <input id="hint" type="button" value="hint" class="btn btn-secondary" onclick="giveHint();">
     </div>
 
     <object id="places" data="places.json"></object>
