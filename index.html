@@ -12,12 +12,19 @@
       /* Optional: Makes the sample page fill the window. */
       html, body { height: 100%; margin: 0; padding: 0}
 
+      .navbar-words {
+        font-weight: bold;
+        align: left;
+        font-family: sans-serif;
+        font-size: 16px;
+      }
+
       .floating-menu {
         font-family: sans-serif;
         background: white;
         padding: 10px;
         width: 200px;
-        height: 300px;
+        height: 100px;
         z-index: 100;
         opacity:0.95;
         position: absolute;
@@ -42,6 +49,14 @@
     <ul class="nav navbar-nav">
       <li class="active"><a data-toggle="modal" href="#Instructions">Rules/Instructions</a></li>
     </ul>
+    <ul class="nav navbar-nav navbar-right">
+    <span class="navbar-text">
+      <div id="strikes" class="navbar-words"> </div>
+    </span>
+    <span class="navbar-text">
+      <div id="score" class="navbar-words"></div>
+    </span>
+    </ul>
   </div>
 </nav>
 
@@ -59,9 +74,8 @@
 
   </head>
   <body>
+
     <div class="floating-menu">
-      <div id="strikes"> </div>
-      <div id="score"> </div>
       <div id="message"> </div>
       <form action="" id=guessform>
        <input id="guess" type="text" class="form-control form-control-lg" placeholder="Guess a City" name="Guess a City">
