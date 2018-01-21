@@ -23,8 +23,8 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#"><img class="logo" alt="Brand" src="logo.png"></a>
-      <a class="navbar-brand" href="#">CityGuesser</a>
+      <a class="navbar-brand" href="https://gduer.github.io/CityGuesser/"><img class="logo" alt="Brand" src="logo.png"></a>
+      <a class="navbar-brand" href="https://gduer.github.io/CityGuesser/">CityGuesser</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a data-toggle="modal" href="#Instructions">Rules/Instructions</a></li>
@@ -50,7 +50,7 @@
        <br><br>
        <h5> Or take a hint: </h5>
        <div class="btn-group">
-         <button type="button" class="btn btn-warning openBtn hint" data-toggle="modal" data-target="#hint1" onclick="giveNatBirdHint();">Free!</button>
+         <button type="button" class="btn btn-warning openBtn hint" data-toggle="modal" data-target="#hint1" onclick="giveNatBirdHint();">Bird</button>
          <button type="button" class="btn btn-warning openBtn hint" data-toggle="modal" data-target="#hint2" onclick="giveHemisphereHint();">-5</button>
          <button type="button" class="btn btn-warning openBtn hint" data-toggle="modal" data-target="#hint3" onclick="giveContinentHint();">-10</button>
          <button type="button" class="btn btn-warning openBtn hint" data-toggle="modal" data-target="#hint4" onclick="giveCountryHint();">-15</button>
@@ -204,7 +204,6 @@
 
         }
         else {
-          points = points - 20;
           document.getElementById("message").innerHTML = "Nope. The answer was " + randomCity.name;
           document.getElementById("score").innerHTML = "Points: " + points;
           strikes ++;
