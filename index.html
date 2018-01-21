@@ -19,6 +19,14 @@
         font-size: 16px;
       }
 
+      .navbar-words2 {
+        font-weight: bold;
+        align: left;
+        font-family: sans-serif;
+        font-size: 16px;
+        color: white;
+      }
+
       .floating-menu {
         font-family: sans-serif;
         background: white;
@@ -58,6 +66,12 @@
       width: 58px;
     }
 
+    .navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
     </style>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -67,6 +81,9 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a data-toggle="modal" href="#Instructions">Rules/Instructions</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-center">
+    <span class="navbar-text"><div id="message" class="navbar-words2"> </div></span>
     </ul>
     <ul class="nav navbar-nav navbar-right">
     <span class="navbar-text">
@@ -78,7 +95,6 @@
     </ul>
   </div>
 </nav>
-
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -95,7 +111,6 @@
   <body>
 
     <div class="floating-menu">
-      <div id="message"> </div>
       <form action="" id=guessform>
        <input id="guess" type="text" class="form-control form-control-lg" placeholder="Guess a City" name="Guess a City">
        <a id="guessbutton" href="#" class="btn btn-primary" onclick="makeGuess();">Guess</a>
