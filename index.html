@@ -33,6 +33,9 @@
     <span class="navbar-text"><div id="message" class="navbar-words2"> </div></span>
     </ul>
     <ul class="nav navbar-nav navbar-right">
+      <span class="navbar-text">
+        <div id="guesses" class="navbar-words"> </div>
+      </span>
     <span class="navbar-text">
       <div id="strikes" class="navbar-words"> </div>
     </span>
@@ -173,6 +176,8 @@
       var hints3=0;
       var hints4=0;
       var strikes = 0;
+      var guesses =0;
+      var wronglist = ["Nope.","Nah.","Definitely not that.", "Wrong."]
 
       function getRandomInt(max) {
         num = Math.floor(Math.random() * Math.floor(max));
@@ -192,28 +197,38 @@
 
       document.getElementById("score").innerHTML = "Points: " + points;
       document.getElementById("strikes").innerHTML = "Strikes: " + strikes;
+      document.getElementById("guesses").innerHTML = "Guesses: " + guesses;
 
       var object = document.getElementById("places");
 
       function makeGuess() {
         var guess = document.getElementById("guess").value;
-        if (guess.toLowerCase().trim() === randomCity.name.toLowerCase().trim()){
+        if (guess.toLowerCase().trim().replace(/\./g,"").replace("city","").replace(/\s+/g, '') == randomCity.name.toLowerCase().trim().replace(/\./g,"").replace("city","").replace(/\s+/g, '')){
           points = points + 20;
+          guesses = 0;
           document.getElementById("message").innerHTML = "That's right!!!!";
           document.getElementById("score").innerHTML = "Points: " + points;
+          document.getElementById("guesses").innerHTML = "Guesses: " + guesses;
+          object.onload();
 
         }
         else {
-          document.getElementById("message").innerHTML = "Nope. The answer was " + randomCity.name;
+          document.getElementById("message").innerHTML = wronglist[Math.floor(Math.random()*wronglist.length)];
           document.getElementById("score").innerHTML = "Points: " + points;
-          strikes ++;
-          document.getElementById("strikes").innerHTML = "Strikes: " + strikes;
+          guesses ++;
+          document.getElementById("guesses").innerHTML = "Guesses: " + guesses;
+          if (guesses == 3){
+            strikes++;
+            guesses = 0;
+            document.getElementById("strikes").innerHTML = "Strikes: " + strikes;
+            document.getElementById("message").innerHTML = "Sorry. The answer was " + randomCity.name;
+            object.onload();
+          }
           if (strikes == 3){
             gameOver();
           }
         }
         document.getElementById("guess").value = "";
-        object.onload();
       }
 
       object.onload = function() {
@@ -239,29 +254,6 @@
               makeGuess();
               return event.keyCode != 13;
             }
-        }
-
-      function giveHint(){
-          if (hints == 0){
-          points = points - 5;
-          document.getElementById("message").innerHTML = "This place is in the " + randomCity.hemisphere + " hemisphere.";
-          }
-
-          else if (hints == 1) {
-          points = points - 10
-          document.getElementById("message").innerHTML = "This place is in the continent of " + randomCity.continent + ".";
-          }
-
-          else if (hints == 2) {
-          points = points - 15
-          document.getElementById("message").innerHTML = "This place is in " + randomCity.country + ".";
-          }
-
-          else if (hints > 2){
-          document.getElementById("message").innerHTML = "Sorry. No more hints.";
-          }
-          document.getElementById("score").innerHTML = "Points: " + points;
-          hints ++;
         }
 
       function gameOver(){
