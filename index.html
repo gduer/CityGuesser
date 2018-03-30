@@ -244,7 +244,7 @@
           mapTypeId: 'satellite',
           disableDefaultUI: true
         })
-          google.maps.event.addListener(map, 'zoom_changed', function() {
+          map.addListener('zoom_changed', function() {
           if (map.getZoom() < minZoomLevel) map.setZoom(minZoomLevel);
           });;
         }
