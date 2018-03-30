@@ -11,8 +11,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWHTnGlByt3KMI3QraQwn50cwUHAA4pc0"
-    async defer></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?v=3.31&key=AIzaSyAWHTnGlByt3KMI3QraQwn50cwUHAA4pc0"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
 
@@ -244,10 +243,11 @@
           mapTypeId: 'satellite',
           disableDefaultUI: true
         })
-          map.addListener('zoom_changed', function() {
-          if (map.getZoom() < minZoomLevel) map.setZoom(minZoomLevel);
-          });;
+        google.maps.event.addListener(map, 'zoom_changed', function() {
+        if (map.getZoom() < minZoomLevel) {map.setZoom(minZoomLevel);}});
         }
+
+
 
         document.getElementById('guess').onkeydown = function(event) {
             if (event.keyCode == 13) {
